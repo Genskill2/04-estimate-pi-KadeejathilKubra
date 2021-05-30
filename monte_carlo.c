@@ -40,21 +40,19 @@ int main(void) {
 }
 float mc_pi(int n){
 	float pi;
-	int i,nThrows,nSuccess;
-
-	for (i = 0; i < n ; i++){ 
-		
-	   float x,y;                                                          
-   	    x = frandom();      // Throw a dart                   
+	int i;
+	int nThrows = 0;
+	int nSuccess = 0;
+	float x,y;  
+	for (i = 0; i < n ; i++){
+	    x = frandom();                         
    	    y = frandom();                                                
-   									
    	    nThrows++;                                                        
-   									
    	    if ( x*x + y*y <= 1 )             
-   	       nSuccess++;                                               
+   	    nSuccess++;                                               
 	} 
 	
-   	 pi = 4*(float)nSuccess/(float)nThrows;
+   	 pi = 4*(double)nSuccess/(double)nThrows;
    	 return pi;
  }
 
