@@ -38,6 +38,23 @@ int main(void) {
     }
   }
 }
+float mc_pi(int n){
+
+	for (i = 0; i < n ; i++){ 
+		float pi;
+		int nThrows,nSuccess;
+		float x,y;                                                          
+   	    x = frandom();      // Throw a dart                   
+   	    y = frandom();                                                
+   									
+   	    nThrows++;                                                        
+   									
+   	    if ( x*x + y*y <= 1 )             
+   	       nSuccess++;                                               
+		} 
+   	 pi = 4*(float)nSuccess/(float)nThrows;
+   	 return pi;
+ }
 
 
 
