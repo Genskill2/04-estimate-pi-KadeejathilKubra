@@ -24,13 +24,12 @@ int main(void) {
   }
 }
 float wallis_pi(int n){
-	float pi,left,right,total;
+	float pi;
 	for(int i=1;i<n;i++)
 	{
-	left = float(2 * i)/(2 * i - 1)
-        right = float(2 * i)/(2 * i + 1)
-	total = left * right
-        pi = pi + total
+	pi = 2*(4*i*i)/((4*i*i)-1);
+	
+	
     }
     return pi;
  }
