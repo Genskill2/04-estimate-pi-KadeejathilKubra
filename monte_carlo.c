@@ -42,7 +42,7 @@ float mc_pi(int n){
 	int a=0;
 	int b =0;
 	float pi;  
-	for (i = 0; i < n ; i++){
+	for (int i = 0; i < n ; i++){
 	    float x = frandom();                         
    	    float y = frandom();                                                
    	   float distance = (x*x) + (y*y);
