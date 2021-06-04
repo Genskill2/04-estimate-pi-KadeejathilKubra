@@ -39,7 +39,6 @@ int main(void) {
   }
 }
 float mc_pi(int n){
-	float pi;
 	int a=0;
 	int b =0;
 	float pi;  
