@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-float mc_pi(int);
+float mc_pi(int n);
 
 float frandom() {
   long int q = random();
@@ -40,19 +40,21 @@ int main(void) {
 }
 float mc_pi(int n){
 	float pi;
-	int i;
-	int nThrows = 0;
-	int nSuccess = 0;
-	float x,y;  
+	int a=0;
+	int b =0;
+	float pi;  
 	for (i = 0; i < n ; i++){
-	    x = frandom();                         
-   	    y = frandom();                                                
-   	    nThrows++;                                                        
-   	    if ( x*x + y*y <= 1 )             
-   	    nSuccess++;                                               
-	} 
+	    float x = frandom();                         
+   	    float y = frandom();                                                
+   	   float distance = (x*x) + (y*y);
+		a+=1;
+		distance=sqrt(distance);
+	 if(distance<=1.0){
+		 b+=1;
+	 }
 	
-   	 pi = 4*(double)nSuccess/(double)nThrows;
+   	 pi = 4*(float)b/(float)a);
+	}
    	 return pi;
  }
 
